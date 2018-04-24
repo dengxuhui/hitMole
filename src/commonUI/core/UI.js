@@ -1,8 +1,6 @@
 /*
-* name;
+* 常量定义
 */
-var UI = (function () {
-    function UI() {
-    }
-    return UI;
-}());
+var UI = {
+
+};

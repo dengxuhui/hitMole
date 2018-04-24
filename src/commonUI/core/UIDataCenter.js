@@ -90,5 +90,25 @@ var UIDataCenter = (function () {
         enumerable:true,
         configurable:true
     });
+    Object.defineProperty(UIDataCenter.prototype,"isLoaded",{
+        get:function(){
+            return this._isLoaded;
+        },
+        set:function(value){
+            this._isLoaded = value;
+        },
+        enumerable:true,
+        configurable:true
+    });
+    Object.defineProperty(UIDataCenter.prototype,"isOpened",{
+        get:function(){
+            return this._isOpened;
+        },
+        set:function(value){
+            this._isOpened = value;
+        },
+        enumerable:true,
+        configurable:true
+    });    
     return UIDataCenter;
 }());
