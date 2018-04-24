@@ -1,12 +1,12 @@
-/**
-* name 
+/*
+* name;
 */
-var commonUI;
-(function (commonUI) {
-    var MainUIManager = (function () {
-        function MainUIManager() {
-        }
-        return MainUIManager;
-    }());
-    commonUI.MainUIManager = MainUIManager;
-})(commonUI || (commonUI = {}));
+var MainUIManager = (function (_super) {
+    function MainUIManager() {
+        MainUIManager.super(this);
+        this.addControl(MainUIControl);
+        this.addView(MainUIView);
+    }
+    Laya.class(MainUIManager,"MainUIManager",_super);
+    return MainUIManager;
+}(BaseUIManager));

@@ -1,6 +1,8 @@
 /*
 * 常量定义
 */
-var UI = {
-
-};
+if(typeof UI == "undefined"){
+    var UI = {
+        Main:1
+    }
+}

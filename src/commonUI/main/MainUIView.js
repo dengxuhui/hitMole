@@ -1,16 +1,18 @@
-/**
-* name 
+/*
+* name;
 */
-var commonUI;
-(function (commonUI) {
-    var MainUIView = (function (_super) {
-        function MainUIView() {
-            return _super.call(this) || this;
-        }
-        var _proto = MainUIView.prototype;
-        _proto.onShow = function(){            
-        }
-        return MainUIView;
-    }(ui.ui.MainUI));
-    commonUI.MainUIView = MainUIView;
-})(commonUI || (commonUI = {}));
+var MainUIView = (function (_super) {
+    function MainUIView() {
+        MainUIView.super(this);    
+        this._ui = new MainUI();    
+    }
+    Laya.class(MainUIView,"MainUIView",_super);
+    MainUIView.prototype.onShow = function(){
+        manager.LayerManager.addToLayer(this._ui);
+    };
+    MainUIView.prototype.onHide = function(){
+        manager.LayerManager.removeToLayer(this._ui);
+    };
+
+    return MainUIView;
+}(BaseUIView));

@@ -29,7 +29,7 @@
             "x":15,
             "type":"UIView",
             "source":"ui/MoleItem.ui",
-            "props":{"y":218,"x":157},
+            "props":{"y":400,"x":566},
             "nodeParent":1,
             "label":"UIView",
             "isDirectory":false,

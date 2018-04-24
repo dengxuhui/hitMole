@@ -1,10 +1,11 @@
 var UICenter = (function(_super){
     function UICenter(){
-        var _this = _super.call(this) || this;
+        // var _this = _super.call(this) || this;
         //以下添加需要添加的manager
-        // ex:_this.addManager(....,....);
-        return _this;
-    };        
+        // ex:_this.addManager(....,....);        
+        UICenter.super(this);
+        this.addManager(UI.Main,MainUIManager);    
+    }        
     Laya.class(UICenter,"UICenter",_super);
     var _proto = UICenter.prototype;
 
