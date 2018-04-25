@@ -61,7 +61,7 @@ var UIViewCenter = (function () {
         if(this._views == null){
             return null;
         }
-        return this._views.getView(className);
+        return this._views.get(className);
     };
     _proto.isExist = function(){
         if(this._views == null){

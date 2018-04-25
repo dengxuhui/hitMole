@@ -1,0 +1,17 @@
+{
+    "Loading":[
+        {
+            "url":"res/atlas/ui.atlas"            
+        },
+        {
+            "url":"res/conf/additemPosition.json"
+        }
+        
+    ],
+    "Gameing":[
+
+    ],
+    "GameOver":[
+
+    ]
+}

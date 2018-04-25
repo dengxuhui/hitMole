@@ -1,10 +1,14 @@
 var UICenter = (function(_super){
-    function UICenter(){
-        // var _this = _super.call(this) || this;
+    function UICenter(){        
         //以下添加需要添加的manager
         // ex:_this.addManager(....,....);        
         UICenter.super(this);
-        this.addManager(UI.Main,MainUIManager);    
+        //主游戏界面
+        this.addManager(UI.Main,MainUIManager);            
+        //游戏规则界面
+        this.addManager(UI.GameRule,GameRuleUIManager);
+        //游戏结算界面
+        this.addManager(UI.GameResult,GameResultUIManager);
     }        
     Laya.class(UICenter,"UICenter",_super);
     var _proto = UICenter.prototype;

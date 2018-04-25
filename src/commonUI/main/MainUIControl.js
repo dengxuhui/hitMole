@@ -3,13 +3,29 @@
 */
 var MainUIControl = (function (_super) {
     function MainUIControl() {
-        MainUIControl.super(this);
+        MainUIControl.__super.call(this);
     }
+    Laya.class(MainUIControl,"MainUIControl",_super);
+
+
     MainUIControl.prototype.onShow = function(){
-        console.log("onshow");
+        var openParam = this._dataCenter.getOpenParam();
+        var view = this._viewCenter.getView(MainUIView);
+        if(openParam == null || view == null){
+            console.assert(true,"主界面UI打开参数或界面为空");
+            return;            
+        }    
+        this.startGame();    
     };
     MainUIControl.prototype.onHide = function(){
-        console.log("onHide");
+        
     };
+
+    /**
+     * 开始游戏
+     */
+    MainUIControl.prototype.startGame = function(){
+        
+    }; 
     return MainUIControl;
 }(BaseUIControl));

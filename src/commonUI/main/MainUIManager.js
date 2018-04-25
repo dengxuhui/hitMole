@@ -2,11 +2,12 @@
 * name;
 */
 var MainUIManager = (function (_super) {
-    function MainUIManager() {
-        MainUIManager.super(this);
+    function MainUIManager() {       
+        MainUIManager.__super.call(this);
         this.addControl(MainUIControl);
         this.addView(MainUIView);
+        this.setOpenParam(MainUIOpenParam);
     }
-    Laya.class(MainUIManager,"MainUIManager",_super);
+     Laya.class(MainUIManager, "MainUIManager", _super);
     return MainUIManager;
 }(BaseUIManager));

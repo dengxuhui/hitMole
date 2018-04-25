@@ -2,17 +2,16 @@
 * name;
 */
 var MainUIView = (function (_super) {
-    function MainUIView() {
-        MainUIView.super(this);    
-        this._ui = new MainUI();    
-    }
-    Laya.class(MainUIView,"MainUIView",_super);
+    function MainUIView() {        
+        MainUIView.__super.call(this);    
+        this.ui = new MainUI();    
+    }   
+    Laya.class(MainUIView,"MainUIView",_super); 
     MainUIView.prototype.onShow = function(){
-        manager.LayerManager.addToLayer(this._ui);
+        LayerManager.instance.addToLayer(this.ui);        
     };
     MainUIView.prototype.onHide = function(){
-        manager.LayerManager.removeToLayer(this._ui);
+        LayerManager.getInstance.removeToLayer(this.ui);
     };
-
     return MainUIView;
 }(BaseUIView));
