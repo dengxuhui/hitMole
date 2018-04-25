@@ -25,7 +25,10 @@ var MainUIControl = (function (_super) {
      * 开始游戏
      */
     MainUIControl.prototype.startGame = function(){
-        
+        this.hammer = new Hammer();
+        var view = this._viewCenter.getView(MainUIView);
+        view.ui.addChild(this.hammer);
+        this.hammer.start();
     }; 
     return MainUIControl;
 }(BaseUIControl));
