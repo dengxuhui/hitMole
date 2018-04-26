@@ -45,7 +45,7 @@ var BaseUIManager = (function () {
     };
     BaseUIManager.prototype.close =function(){
         if(this._dataCenter == null ||
-        this._dataCenter.isLoading || this._dataCenter.isOpened){
+        this._dataCenter.isLoading || !this._dataCenter.isOpened){
             return;
         }
         this.doHide();
@@ -168,7 +168,7 @@ var BaseUIManager = (function () {
     };
     Object.defineProperty(BaseUIManager.prototype,"isOpened",{
         get:function(){
-            if(this._dataCenter || !this._dataCenter.isOpened){
+            if(this._dataCenter == null || !this._dataCenter.isOpened){
                 return false;
             }
             return true;
