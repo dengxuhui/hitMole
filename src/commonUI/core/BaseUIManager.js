@@ -68,7 +68,7 @@ var BaseUIManager = (function () {
         }
         this._controlCenter.addControl(className);
     };
-    BaseUIManager.prototype.addData = function(){
+    BaseUIManager.prototype.addData = function(className){
         if(this._dataCenter == null){
             return;
         }

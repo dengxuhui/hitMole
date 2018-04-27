@@ -8,6 +8,7 @@ var GameResultUI=(function(_super){
 		    this.btnRestart=null;
 		    this.boxScore=null;
 		    this.imgTotalScore=null;
+		    this.viewScore=null;
 
 			GameResultUI.__super.call(this);
 		}
@@ -15,14 +16,14 @@ var GameResultUI=(function(_super){
 		CLASS$(GameResultUI,'ui.ui.GameResultUI',_super);
 		var __proto__=GameResultUI.prototype;
 		__proto__.createChildren=function(){
-		    			View.regComponent("viewScore",viewScore);
+		    			View.regComponent("ui.ui.ScoreUI",ui.ui.ScoreUI);
 
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(GameResultUI.uiView);
 
 		}
 
-		GameResultUI.uiView={"type":"View","props":{"width":600,"height":300},"child":[{"type":"Image","props":{"y":0,"x":0,"width":600,"skin":"ui/overBg.png","height":300,"sizeGrid":"10,10,10,10"}},{"type":"Button","props":{"y":204,"x":211,"var":"btnRestart","stateNum":2,"skin":"ui/btn_restart.png"}},{"type":"Box","props":{"y":79,"x":26,"var":"boxScore"},"child":[{"type":"Image","props":{"var":"imgTotalScore","skin":"ui/total Score.png"}}]},{"type":"Score","props":{"y":105,"x":256,"scaleY":1.5,"scaleX":1.5,"runtime":"viewScore"}}]};
+		GameResultUI.uiView={"type":"View","props":{"width":600,"height":300},"child":[{"type":"Image","props":{"y":0,"x":0,"width":600,"skin":"ui/overBg.png","height":300,"sizeGrid":"10,10,10,10"}},{"type":"Button","props":{"y":204,"x":211,"var":"btnRestart","stateNum":2,"skin":"ui/btn_restart.png"}},{"type":"Box","props":{"y":79,"x":26,"var":"boxScore"},"child":[{"type":"Image","props":{"var":"imgTotalScore","skin":"ui/total Score.png"}}]},{"type":"Score","props":{"y":116,"x":261,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
 		return GameResultUI;
 	})(View);
 var GameRuleUI=(function(_super){
@@ -82,6 +83,7 @@ var MainUI=(function(_super){
 		    this.item_2_2=null;
 		    this.boxHoleBg2=null;
 		    this.progressTime=null;
+		    this.viewScore=null;
 
 			MainUI.__super.call(this);
 		}
@@ -90,14 +92,14 @@ var MainUI=(function(_super){
 		var __proto__=MainUI.prototype;
 		__proto__.createChildren=function(){
 		    			View.regComponent("ui.ui.MoleItemUI",ui.ui.MoleItemUI);
-			View.regComponent("viewScore",viewScore);
+			View.regComponent("ui.ui.ScoreUI",ui.ui.ScoreUI);
 
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(MainUI.uiView);
 
 		}
 
-		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"MoleItem","props":{"y":208,"x":347,"var":"item_1_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":203,"x":160,"var":"item_0_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":196,"x":548,"var":"item_2_0","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":276,"x":152,"var":"boxHoleBg0"},"child":[{"type":"Image","props":{"y":1,"skin":"ui/mask-01.png"}},{"type":"Image","props":{"y":3,"x":388,"skin":"ui/mask-03.png"}},{"type":"Image","props":{"x":192,"skin":"ui/mask-02.png"}}]},{"type":"MoleItem","props":{"y":285,"x":131,"var":"item_0_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":287,"x":350,"var":"item_1_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":285,"x":550,"var":"item_2_1","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":369,"x":129,"var":"boxHoleBg1"},"child":[{"type":"Image","props":{"skin":"ui/mask-04.png"}},{"type":"Image","props":{"y":2,"x":218,"skin":"ui/mask-05.png"}},{"type":"Image","props":{"y":1,"x":417,"skin":"ui/mask-06.png"}}]},{"type":"MoleItem","props":{"y":384,"x":125,"var":"item_0_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":349,"var":"item_1_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":570,"var":"item_2_2","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":467,"x":123,"var":"boxHoleBg2"},"child":[{"type":"Image","props":{"skin":"ui/mask-07.png"}},{"type":"Image","props":{"y":5,"x":223,"skin":"ui/mask-08.png"}},{"type":"Image","props":{"y":6,"x":442,"skin":"ui/mask-09.png"}}]},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":32,"x":65,"runtime":"viewScore"}}]};
+		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"MoleItem","props":{"y":208,"x":347,"var":"item_1_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":203,"x":160,"var":"item_0_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":196,"x":548,"var":"item_2_0","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":276,"x":152,"var":"boxHoleBg0"},"child":[{"type":"Image","props":{"y":1,"skin":"ui/mask-01.png"}},{"type":"Image","props":{"y":3,"x":388,"skin":"ui/mask-03.png"}},{"type":"Image","props":{"x":192,"skin":"ui/mask-02.png"}}]},{"type":"MoleItem","props":{"y":285,"x":131,"var":"item_0_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":287,"x":350,"var":"item_1_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":285,"x":550,"var":"item_2_1","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":369,"x":129,"var":"boxHoleBg1"},"child":[{"type":"Image","props":{"skin":"ui/mask-04.png"}},{"type":"Image","props":{"y":2,"x":218,"skin":"ui/mask-05.png"}},{"type":"Image","props":{"y":1,"x":417,"skin":"ui/mask-06.png"}}]},{"type":"MoleItem","props":{"y":384,"x":125,"var":"item_0_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":349,"var":"item_1_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":570,"var":"item_2_2","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":467,"x":123,"var":"boxHoleBg2"},"child":[{"type":"Image","props":{"skin":"ui/mask-07.png"}},{"type":"Image","props":{"y":5,"x":223,"skin":"ui/mask-08.png"}},{"type":"Image","props":{"y":6,"x":442,"skin":"ui/mask-09.png"}}]},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":34,"x":60,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
 		return MainUI;
 	})(View);
 var MoleItemUI=(function(_super){
@@ -138,6 +140,6 @@ var ScoreUI=(function(_super){
 
 		}
 
-		ScoreUI.uiView={"type":"View","props":{"width":172,"height":23},"child":[{"type":"Clip","props":{"y":0,"x":0,"skin":"ui/clip_number.png","name":"item0","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":17,"skin":"ui/clip_number.png","name":"item1","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":34,"skin":"ui/clip_number.png","name":"item2","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":51,"skin":"ui/clip_number.png","name":"item3","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":68,"skin":"ui/clip_number.png","name":"item4","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":86,"skin":"ui/clip_number.png","name":"item5","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":103,"skin":"ui/clip_number.png","name":"item6","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":120,"width":18,"skin":"ui/clip_number.png","name":"item7","height":24,"clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":137,"skin":"ui/clip_number.png","name":"item8","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":154,"skin":"ui/clip_number.png","name":"item9","clipY":1,"clipX":10}}]};
+		ScoreUI.uiView={"type":"View","props":{"width":172,"height":23},"child":[{"type":"Clip","props":{"y":0,"x":0,"skin":"ui/clip_number.png","name":"item9","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":17,"skin":"ui/clip_number.png","name":"item8","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":34,"skin":"ui/clip_number.png","name":"item7","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":51,"skin":"ui/clip_number.png","name":"item6","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":68,"skin":"ui/clip_number.png","name":"item5","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":86,"skin":"ui/clip_number.png","name":"item4","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":103,"width":18,"skin":"ui/clip_number.png","name":"item3","height":24,"clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":120,"width":18,"skin":"ui/clip_number.png","name":"item2","height":24,"clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":137,"skin":"ui/clip_number.png","name":"item1","clipY":1,"clipX":10}},{"type":"Clip","props":{"y":0,"x":154,"skin":"ui/clip_number.png","name":"item0","clipY":1,"clipX":10}}]};
 		return ScoreUI;
 	})(View);

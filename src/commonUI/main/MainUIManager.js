@@ -7,6 +7,7 @@ var MainUIManager = (function (_super) {
         this.addControl(MainUIControl);
         this.addView(MainUIView);
         this.setOpenParam(MainUIOpenParam);
+        this.addData(MainUIData);
     }
      Laya.class(MainUIManager, "MainUIManager", _super);
     return MainUIManager;

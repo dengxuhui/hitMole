@@ -20,6 +20,7 @@ var MainUIControl = (function (_super) {
             return;
         }
         if (openParam.isNewGame) {
+            openParam.isNewGame = false;
             this.startGame();
         }
     };
@@ -27,6 +28,7 @@ var MainUIControl = (function (_super) {
     MainUIControl.prototype.onOpenAgain = function () {
         var openParam = this._dataCenter.getOpenParam();
         if (openParam.isNewGame) {
+            openParam.isNewGame = false;
             this.startGame();
         }
     };

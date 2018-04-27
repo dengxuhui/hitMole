@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":8,
+    "selecteID":9,
     "props":{"width":600,"sceneColor":"#ffffff","height":300},
     "nodeParent":-1,
     "label":"View",
@@ -24,7 +24,7 @@
             "compId":2,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -69,13 +69,13 @@
             "x":15,
             "type":"UIView",
             "source":"ui/Score.ui",
-            "props":{"y":105,"x":256,"scaleY":1.5,"scaleX":1.5,"runtime":"viewScore"},
+            "props":{"y":116,"x":261,"var":"viewScore"},
             "nodeParent":1,
-            "label":"UIView",
+            "label":"UIView(viewScore)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":8,
+            "compId":9,
             "child":[
                 ]
         }],

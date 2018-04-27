@@ -15,7 +15,9 @@ var GameRuleUIControl = (function (_super) {
         //类型区分测试代码~
         // console.log(typeof view.ui);
         // console.log(view.constructor);
-        // console.log(view instanceof GameRuleUIView);        
+        // console.log(view instanceof GameRuleUIView);       
+        this.scoreControler = new ScoreControler(view.ui.viewScore);
+        this.scoreControler.updateScore(100);
     };
     GameRuleUIControl.prototype.onStartClick = function(){
         var view = this._viewCenter.getView(GameRuleUIView);

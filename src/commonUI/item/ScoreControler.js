@@ -3,6 +3,7 @@
 完全由这个控制器所去做，只需要给这个控制器提供代理对象即可
 */
 var ScoreControler = (function () {
+    ScoreControler.MAX_ITEM = 10;
     function ScoreControler(scoreUI) {
         if(scoreUI != null && scoreUI instanceof ScoreUI){
             this.ui = scoreUI;
@@ -12,13 +13,26 @@ var ScoreControler = (function () {
         if(this.ui == null){
             return;
         }
-        //TODO
+        var scoreAry = score.toString().spit("");
+        if(scoreAry <= 0){
+            return;
+        }
+        for(var i = 0;i < scoreAry.length;i++){
+            var item = ui.getChildByName("item" + (scoreAry.length - 1 - i));
+            if(item == null){
+                continue;
+            }
+            item.index = parseInt(scoreAry[i]);
+        }
     };
-    ScoreControler.prototype.clearScore = function(score){
+    ScoreControler.prototype.clearScore = function(){
         if(this.ui == null){
             return;
         }
-        //TODO
+        for(var i = 0;i < ScoreControler.MAX_ITEM;i++){
+            var item = ui.getChildByName("item" + i);
+            item.index = 0;            
+        }
     };
     return ScoreControler;
 }());
