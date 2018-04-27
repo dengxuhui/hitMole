@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":3,
+    "selecteID":8,
     "props":{"width":600,"sceneColor":"#ffffff","height":300},
     "nodeParent":-1,
     "label":"View",
@@ -64,6 +64,20 @@
                     "child":[
                         ]
                 }]
+        },
+        {
+            "x":15,
+            "type":"UIView",
+            "source":"ui/Score.ui",
+            "props":{"y":105,"x":256,"scaleY":1.5,"scaleX":1.5,"runtime":"viewScore"},
+            "nodeParent":1,
+            "label":"UIView",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8,
+            "child":[
+                ]
         }],
     "animations":[
         {

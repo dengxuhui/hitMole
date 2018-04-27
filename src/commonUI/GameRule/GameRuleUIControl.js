@@ -12,6 +12,10 @@ var GameRuleUIControl = (function (_super) {
             return;
         }                
         view.ui.btnStart.clickHandler = Laya.Handler.create(this,this.onStartClick,null,false);
+        //类型区分测试代码~
+        // console.log(typeof view.ui);
+        // console.log(view.constructor);
+        // console.log(view instanceof GameRuleUIView);        
     };
     GameRuleUIControl.prototype.onStartClick = function(){
         var view = this._viewCenter.getView(GameRuleUIView);
