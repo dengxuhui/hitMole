@@ -53,10 +53,9 @@ var UIDataCenter = (function () {
                 if(data != null){
                     data.destory();
                     data = null;
+                    this._datas.addValue(this._datas.keys[i],null);
                 }
-            }
-            this._datas.clear();
-            this._datas = null;
+            }            
         }
         if(this._openParam != null){
             this._openParam.reset();

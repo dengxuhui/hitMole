@@ -13,7 +13,7 @@ var UIControlCenter = (function () {
         if(this._controls != null){
             for(var i = 0;i < this._controls.values.length;i++){
                 var control = this._controls.values[i];
-                if(control != null){
+                if(control != null){                    
                     control.destory();
                     control = null;
                 }

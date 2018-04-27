@@ -19,7 +19,7 @@ var Main = (function () {
         Laya.loader.load(jsonData.Loading, Laya.Handler.create(this, this.onLoaded));
     };
     Main.prototype.onLoaded = function () {
-        UICenter.instance.openUI(UI.GameRule);
+        UICenter.instance.openUI(UI.GameRule);        
     };
     return Main;
 }());

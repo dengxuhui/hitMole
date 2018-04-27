@@ -43,7 +43,10 @@ var BaseUIManager = (function () {
             this.doLoad();
         }
     };
-    BaseUIManager.prototype.close =function(){
+    /** 
+     * 隐藏时
+    */
+    BaseUIManager.prototype.close = function(){
         if(this._dataCenter == null ||
         this._dataCenter.isLoading || !this._dataCenter.isOpened){
             return;
@@ -51,7 +54,7 @@ var BaseUIManager = (function () {
         this.doHide();
     };
     BaseUIManager.prototype.hide = function(){
-        if(this._dataCenter == null || this._dataCenter.isLoading || this._dataCenter.isOpened){
+        if(this._dataCenter == null || this._dataCenter.isLoading || !this._dataCenter.isOpened){
             return; 
         }
         this.doHide();

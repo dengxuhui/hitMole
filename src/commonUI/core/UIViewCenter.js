@@ -46,7 +46,7 @@ var UIViewCenter = (function () {
             var view = this._views.values[i];
             if(view != null){
                 view.onHide();
-                view.destory();
+                view.destory();                
                 this._views.set(this._views.keys[i],null);
             }
         }
