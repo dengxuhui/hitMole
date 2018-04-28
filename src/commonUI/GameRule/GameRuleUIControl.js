@@ -27,7 +27,7 @@ var GameRuleUIControl = (function (_super) {
         view.ui.btnStart.enable = false;
         var openParam = UICenter.instance.getOpenParam(UI.Main);
         if(openParam != null){
-            openParam.isNewGame = true;
+            openParam.isStartingGame = true;
         }
         UICenter.instance.openUI(UI.Main);        
         UICenter.instance.closeUI(UI.GameRule);

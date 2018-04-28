@@ -70,18 +70,6 @@ var HammerUI=(function(_super){
 var MainUI=(function(_super){
 		function MainUI(){
 			
-		    this.item_1_0=null;
-		    this.item_0_0=null;
-		    this.item_2_0=null;
-		    this.boxHoleBg0=null;
-		    this.item_0_1=null;
-		    this.item_1_1=null;
-		    this.item_2_1=null;
-		    this.boxHoleBg1=null;
-		    this.item_0_2=null;
-		    this.item_1_2=null;
-		    this.item_2_2=null;
-		    this.boxHoleBg2=null;
 		    this.progressTime=null;
 		    this.viewScore=null;
 
@@ -91,15 +79,14 @@ var MainUI=(function(_super){
 		CLASS$(MainUI,'ui.ui.MainUI',_super);
 		var __proto__=MainUI.prototype;
 		__proto__.createChildren=function(){
-		    			View.regComponent("ui.ui.MoleItemUI",ui.ui.MoleItemUI);
-			View.regComponent("ui.ui.ScoreUI",ui.ui.ScoreUI);
+		    			View.regComponent("ui.ui.ScoreUI",ui.ui.ScoreUI);
 
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(MainUI.uiView);
 
 		}
 
-		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"MoleItem","props":{"y":208,"x":347,"var":"item_1_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":203,"x":160,"var":"item_0_0","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":196,"x":548,"var":"item_2_0","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":276,"x":152,"var":"boxHoleBg0"},"child":[{"type":"Image","props":{"y":1,"skin":"ui/mask-01.png"}},{"type":"Image","props":{"y":3,"x":388,"skin":"ui/mask-03.png"}},{"type":"Image","props":{"x":192,"skin":"ui/mask-02.png"}}]},{"type":"MoleItem","props":{"y":285,"x":131,"var":"item_0_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":287,"x":350,"var":"item_1_1","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":285,"x":550,"var":"item_2_1","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":369,"x":129,"var":"boxHoleBg1"},"child":[{"type":"Image","props":{"skin":"ui/mask-04.png"}},{"type":"Image","props":{"y":2,"x":218,"skin":"ui/mask-05.png"}},{"type":"Image","props":{"y":1,"x":417,"skin":"ui/mask-06.png"}}]},{"type":"MoleItem","props":{"y":384,"x":125,"var":"item_0_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":349,"var":"item_1_2","runtime":"ui.ui.MoleItemUI"}},{"type":"MoleItem","props":{"y":388,"x":570,"var":"item_2_2","runtime":"ui.ui.MoleItemUI"}},{"type":"Box","props":{"y":467,"x":123,"var":"boxHoleBg2"},"child":[{"type":"Image","props":{"skin":"ui/mask-07.png"}},{"type":"Image","props":{"y":5,"x":223,"skin":"ui/mask-08.png"}},{"type":"Image","props":{"y":6,"x":442,"skin":"ui/mask-09.png"}}]},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":34,"x":60,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
+		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":34,"x":60,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
 		return MainUI;
 	})(View);
 var MoleItemUI=(function(_super){
@@ -108,6 +95,7 @@ var MoleItemUI=(function(_super){
 		    this.imgHit=null;
 		    this.imgNormal=null;
 		    this.imgScoreNum=null;
+		    this.imgMask=null;
 
 			MoleItemUI.__super.call(this);
 		}
@@ -121,7 +109,7 @@ var MoleItemUI=(function(_super){
 
 		}
 
-		MoleItemUI.uiView={"type":"View","props":{"width":111,"height":104},"child":[{"type":"Image","props":{"y":12,"x":0,"var":"imgHit","skin":"ui/mouse_hit_0.png"}},{"type":"Image","props":{"y":0,"x":0,"var":"imgNormal","skin":"ui/mouse_normal_0.png"}},{"type":"Image","props":{"y":30,"x":12,"var":"imgScoreNum","skin":"ui/score_1.png"}}]};
+		MoleItemUI.uiView={"type":"View","props":{"width":138,"height":113},"child":[{"type":"Image","props":{"y":0,"x":6,"var":"imgHit","skin":"ui/mouse_hit_0.png"}},{"type":"Image","props":{"y":-2,"x":1,"var":"imgNormal","skin":"ui/mouse_normal_0.png"}},{"type":"Image","props":{"y":53,"x":16,"var":"imgScoreNum","skin":"ui/score_1.png"}},{"type":"Image","props":{"y":67,"x":0,"var":"imgMask","skin":"ui/mask-01.png"}}]};
 		return MoleItemUI;
 	})(View);
 var ScoreUI=(function(_super){

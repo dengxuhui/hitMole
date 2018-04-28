@@ -10,8 +10,7 @@ var MainUIControl = (function (_super) {
         MainUIControl.MAX_TIME = 2;
     }
     Laya.class(MainUIControl, "MainUIControl", _super);
-
-
+    
     MainUIControl.prototype.onShow = function () {
         var openParam = this._dataCenter.getOpenParam();
         var view = this._viewCenter.getView(MainUIView);
@@ -19,16 +18,16 @@ var MainUIControl = (function (_super) {
             console.assert(true, "主界面UI打开参数或界面为空");
             return;
         }
-        if (openParam.isNewGame) {
-            openParam.isNewGame = false;
+        if (openParam.isStartingGame) {
+            openParam.isStartingGame = false;
             this.startGame();
         }
     };
 
     MainUIControl.prototype.onOpenAgain = function () {
         var openParam = this._dataCenter.getOpenParam();
-        if (openParam.isNewGame) {
-            openParam.isNewGame = false;
+        if (openParam.isStartingGame) {
+            openParam.isStartingGame = false;
             this.startGame();
         }
     };
@@ -51,6 +50,17 @@ var MainUIControl = (function (_super) {
 
         view.ui.progressTime.value = 1;
         Laya.timer.loop(1000, this, this.onTimer);
+        Laya.timer.loop(2000,this,this.randomMoleShow);
+    };
+
+    /**
+     * 随机出现地鼠
+     * 出现规则：
+     *  1.最大同时出现个数3个
+     *  2.出现的地鼠随机为减分地鼠  或  加分地鼠
+     */
+    MainUIControl.prototype.randomMoleShow = function(){
+
     };
 
     /** 

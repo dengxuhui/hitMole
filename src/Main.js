@@ -16,7 +16,7 @@ var Main = (function () {
     Main.prototype.onConfLoaded = function () {
         //加载完所需资源打开主场景界面
         var jsonData = Laya.loader.getRes("res/conf/resConf.json");
-        Laya.loader.load(jsonData.Loading, Laya.Handler.create(this, this.onLoaded));
+        Laya.loader.load(jsonData["Loading"], Laya.Handler.create(this, this.onLoaded));
     };
     Main.prototype.onLoaded = function () {
         UICenter.instance.openUI(UI.GameRule);        

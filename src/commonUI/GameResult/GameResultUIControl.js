@@ -22,7 +22,7 @@ var GameResultUIControl = (function (_super) {
     */
     GameResultUIControl.prototype.onReStartClick = function(){
         var openParam = UICenter.instance.getOpenParam(UI.Main);
-        openParam.isNewGame = true;
+        openParam.isStartingGame = true;
 
         UICenter.instance.openUI(UI.Main);
         UICenter.instance.closeUI(UI.GameResult);

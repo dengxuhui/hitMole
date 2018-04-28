@@ -2,8 +2,8 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":4,
-    "props":{"width":111,"sceneColor":"#ffffff","height":104},
+    "selecteID":2,
+    "props":{"width":138,"sceneColor":"#ffffff","height":113},
     "nodeParent":-1,
     "label":"View",
     "isOpen":true,
@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":12,"x":0,"var":"imgHit","skin":"ui/mouse_hit_0.png"},
+            "props":{"y":0,"x":6,"var":"imgHit","skin":"ui/mouse_hit_0.png"},
             "nodeParent":1,
             "label":"Image(imgHit)",
             "isDirectory":false,
@@ -30,7 +30,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":0,"var":"imgNormal","skin":"ui/mouse_normal_0.png"},
+            "props":{"y":-2,"x":1,"var":"imgNormal","skin":"ui/mouse_normal_0.png"},
             "nodeParent":1,
             "label":"Image(imgNormal)",
             "isDirectory":false,
@@ -39,19 +39,32 @@
             "compId":3,
             "child":[
                 ],
-            "$LOCKED":true,
-            "$HIDDEN":false
+            "$LOCKED":false,
+            "$HIDDEN":true
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":30,"x":12,"var":"imgScoreNum","skin":"ui/score_1.png"},
+            "props":{"y":53,"x":16,"var":"imgScoreNum","skin":"ui/score_1.png"},
             "nodeParent":1,
             "label":"Image(imgScoreNum)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":4,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":67,"x":0,"var":"imgMask","skin":"ui/mask_0_0.png"},
+            "nodeParent":1,
+            "label":"Image(imgMask)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5,
             "child":[
                 ]
         }],
