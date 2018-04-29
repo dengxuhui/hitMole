@@ -73,7 +73,7 @@ var UIControlCenter = (function () {
         }
         this._controls.set(className,null);
     };
-    _proto.getControl = function(){
+    _proto.getControl = function(className){
         if(this._controls == null){
             return null;
         }

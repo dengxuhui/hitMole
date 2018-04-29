@@ -109,7 +109,7 @@ var MoleItemUI=(function(_super){
 
 		}
 
-		MoleItemUI.uiView={"type":"View","props":{"width":138,"height":113},"child":[{"type":"Image","props":{"y":0,"x":6,"var":"imgHit","skin":"ui/mouse_hit_0.png"}},{"type":"Image","props":{"y":-2,"x":1,"var":"imgNormal","skin":"ui/mouse_normal_0.png"}},{"type":"Image","props":{"y":53,"x":16,"var":"imgScoreNum","skin":"ui/score_1.png"}},{"type":"Image","props":{"y":67,"x":0,"var":"imgMask","skin":"ui/mask-01.png"}}]};
+		MoleItemUI.uiView={"type":"View","props":{"width":138,"height":113},"child":[{"type":"Image","props":{"y":0,"x":6,"var":"imgHit","skin":"ui/mouse_hit_0.png"}},{"type":"Image","props":{"y":0,"x":1,"var":"imgNormal","skin":"ui/mouse_normal_0.png"}},{"type":"Image","props":{"y":53,"x":16,"var":"imgScoreNum","skin":"ui/score_0.png"}},{"type":"Image","props":{"y":67,"x":0,"var":"imgMask","skin":"ui/mask_0_0.png"}}]};
 		return MoleItemUI;
 	})(View);
 var ScoreUI=(function(_super){
