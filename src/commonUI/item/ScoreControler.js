@@ -18,8 +18,8 @@ var ScoreControler = (function () {
         }
         var scoreAry = score.toString().split("");
         if (scoreAry <= 0) {
-            for (var j = 0; j < scoreAry.length; j++) {
-                var item = this.ui.getChildByName("item" + (scoreAry.length - 1 - i));
+            for (var j = 0; j < 10; j++) {
+                var item = this.ui.getChildByName("item" + j);
                 if (item == null) {
                     continue;
                 }

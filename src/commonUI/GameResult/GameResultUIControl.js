@@ -14,6 +14,7 @@ var GameResultUIControl = (function (_super) {
         var view = this._viewCenter.getView(GameResultUIView);
         if(view != null){
             view.ui.btnRestart.clickHandler = Laya.Handler.create(this,this.onReStartClick,null,false);
+            this.scoreControl = new ScoreControler(view.ui.viewScore);
         }
     };
     
@@ -32,7 +33,7 @@ var GameResultUIControl = (function (_super) {
      * 隐藏时
      */
     GameResultUIControl.prototype.onHide = function(){
-
+        this.scoreControl = null;
     };
 
     return GameResultUIControl;

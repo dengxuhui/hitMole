@@ -70,6 +70,7 @@ var HammerUI=(function(_super){
 var MainUI=(function(_super){
 		function MainUI(){
 			
+		    this.boxItemContainer=null;
 		    this.progressTime=null;
 		    this.viewScore=null;
 
@@ -86,7 +87,7 @@ var MainUI=(function(_super){
 
 		}
 
-		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":34,"x":60,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
+		MainUI.uiView={"type":"View","props":{"width":800,"height":600},"child":[{"type":"Image","props":{"y":25,"x":25,"skin":"ui/back.png"}},{"type":"Box","props":{"y":0,"x":0,"width":800,"var":"boxItemContainer","height":600}},{"type":"ProgressBar","props":{"y":3,"x":3,"var":"progressTime","skin":"ui/progress_time.png"}},{"type":"Score","props":{"y":34,"x":60,"var":"viewScore","runtime":"ui.ui.ScoreUI"}}]};
 		return MainUI;
 	})(View);
 var MoleItemUI=(function(_super){

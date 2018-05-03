@@ -22,6 +22,10 @@ var MainUIData = (function (_super) {
         this.score += score;
     };    
 
+    MainUIData.prototype.destory = function(){
+            
+    };
+
     /**
      * 获取位置数据
      */

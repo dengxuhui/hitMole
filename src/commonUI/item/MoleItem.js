@@ -25,18 +25,21 @@ var MoleItem = (function () {
         this.render.imgScoreNum.skin = "ui/score_" + this.itemType + ".png";
         this.render.imgNormal.y = MoleItem.MAX_SHRINK;
 
-        this.render.on(Laya.Event.CLICK, this, this.onClick);
+        this.render.once(Laya.Event.CLICK, this, this.onClick);
     };
 
-    MoleItem.prototype.onClick = function () {
+    MoleItem.prototype.onClick = function () {    
+        this.render.mouseEnabled = false;    
         this.isHit = true;
         this.isUping = false;
         this.render.imgNormal.visible = !this.isHit;
         this.render.imgHit.visible = this.isHit;
+        this.render.imgScoreNum.visible = this.isHit;
 
         Laya.Tween.clearAll(this.render.imgNormal);
         Laya.Tween.to(this.render.imgHit, { y: MoleItem.MAX_SHRINK }, 500, Laya.Ease.backIn,
             Laya.Handler.create(this, this.onActionOver));
+        Laya.Tween.to(this.render.imgScoreNum,{y:-MoleItem.MAX_SHRINK},500,Laya.Ease.backOut);
     };
 
     MoleItem.prototype.onActionOver = function () {
@@ -67,7 +70,7 @@ var MoleItem = (function () {
         if (mainMgr == null || mainMgr.isOpened) {
             var data = mainMgr.getData(MainUIData);
             var view = mainMgr.getView(MainUIView);
-            view.ui.addChild(this.render);
+            view.ui.boxItemContainer.addChild(this.render);
             var str = data.getPosData(this.x, this.y);            
             var posAry = str.split(",");
         }
